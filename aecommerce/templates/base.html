@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>{% block title %}{% endblock title %}</title>
+  </head>
+  <body>
+    <h1>aECommerce</h1>
+    <ul>
+      <li>
+        <a href="{% url 'main:home_view' %}"> Home </a>
+      </li>
+      <li>
+        <a href="{% url 'main:delivery_view' %}"> Delivery </a>
+      </li>
+      <li>
+        <a href="{% url 'main:payment_view' %}"> Payment </a>
+      </li>
+    </ul>
+    {% block content %}{% endblock content %}
+  </body>
+</html>
